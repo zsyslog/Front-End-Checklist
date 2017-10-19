@@ -1,4 +1,4 @@
-# Front-End Checklist
+# Checklist Front-End 
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Contributors](https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg)](https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors)
 
@@ -12,7 +12,7 @@ Se basa en los años de experiencia de los desarrolladores de Front-End, y añad
 3. **[HTML](#html)**
 4. **[Webfonts](#webfonts)**
 5. **[CSS](#css)**
-6. **[Imagenes](#images)**
+6. **[Imágenes](#images)**
 7. **[JavaScript](#javascript)**
 8. **[Rendimiento](#performance)**
 9. **[Accesibilidad](#accessibility)**
@@ -26,7 +26,7 @@ Todos los elementos de la **Checklist Front-End** son necesarios para la mayorí
 * ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) quiere decir que es **altamente recomendado** y puede ser omitido en casos muy particulares. Algunos elementos, si son omitidos por algún motivo, pueden tener repercusiones negativas en el rendimiento o en el SEO.
 * ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) quiere decir que **no puede ser omitido** por ningún motivo. Podría causar un mal funcionamiento de la página o tener problemas de rendimiento o SEO. Las prioridades de pruebas deben ponerse acá.
 
-Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenido / ayuda puede encontrar en la lista de verificación
+Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenido / ayuda puede encontrar en el checklist
 
 * 📖: documentación o artículo
 * 🛠: herramienta de pruebas
@@ -120,43 +120,46 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 ```
 
 ### HTML tags
-* [ ] **Language tag:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) The language tag of your website is specified and related to the language of the current page.
+* [ ] **Language tag:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) La etiqueta de idioma de su sitio web se especifica y está relacionada con el idioma de la página actual.
 
 ```html
 <html lang="en">
 ```
 
-* [ ] **Direction tag:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) The direction of lecture is specified on the body tag (It can be used on another HTML tag).
+* [ ] **Dir tag:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) La dirección o sentido en que se debe leer el contenido se especifica en una etiqueta del cuerpo.
 
 ```html
 <html dir="rtl">
 ```
+```p
+<p dir="rtl">Lea este texto de derecha-a-izquierda! (rtl=right-to-left)</p>
+```
 
 > 📖 [dir - HTML | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
 
-* [ ] **Alternate language:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) The language tag of your website is specified and related to the language of the current page.
+* [ ] **hreflang tag y lenguaje alternativo:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) La etiqueta de idioma de su sitio web se especifica y está relacionada con el idioma de la página actual.
 
 ```html
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
 ```
 
-* [ ] **Conditional comments:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Conditional comments are present for IE if needed.
+* [ ] **Comentarios condicionales:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Los comentarios condicionales están presentes para IE si es necesario.
 
-> 📖 [About conditional comments (Internet Explorer) - MSDN - Microsoft](https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx)
+> 📖 [Acerca de los comentarios condicionales (Internet Explorer) - MSDN - Microsoft](https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx)
 
-* [ ] **RSS feed:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) If your project is a blog or has articles, an RSS link was provided.
+* [ ] **Feed RSS:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Si el proyecto es un blog o tiene artículos, se proporcionó un enlace RSS.
 
-* [ ] **CSS Critical:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) The CSS critical (or "above the fold") collects all the CSS used to render the visible portion of the page. It is embedded before your principal CSS call and between ``<style></style>`` in a single line (minified).
+* [ ] **CSS Critical:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El CSS crítico ("above the fold") recoge todos los CSS utilizados para representar la capa visible de la página. Está incrustado antes de su llamada CSS principal y entre etiqueta ``<style></style>``, en una sola línea y minificada.
 
-> 🛠 [Critical by Addy Osmany on Github](https://github.com/addyosmani/critical)
+> 🛠 [Critical por Addy Osmany on Github](https://github.com/addyosmani/critical)
 
-* [ ] **CSS order:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All CSS files are loaded before any JavaScript files in the ``<head>``. (Except the case, where sometimes JS files are loaded asynchronously on top of your page).
+* [ ] **Orden CSS:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todos los archivos CSS se cargan antes que cualquier archivo JavaScript en el bloque ``<head></head>``. (Excepto el caso, donde se cargan los archivos JS de manera asíncrona en la parte superior de su página).
 
-### Social meta
+### Social meta 
 
-***Facebook OG*** and ***Twitter Cards*** are, for any website, highly recommended. The other social media tags can be considered if you target a particular presence on those and want to ensure the display.
+***Open Graph de Facebook*** y ***Cards de Twitter *** son altamente recomendados para cualquier sitio. Otras etiquetas de redes sociales se pueden considerar si se orientan a una red en particular y se quiere garantizar su visualización.
 
-* [ ] **Facebook Open Graph:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) All Facebook Open Graph (OG) are tested and no one is missing or with a false information. Images need to be at least 600 x 315 pixels, 1200 x 630 pixels recommended.
+* [ ] **Open Graph de Facebook:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Todos los tags Open Graph de Facebook (OG) se prueban y no falta ninguno o ninguno tiene información falsa. Las imágenes deben ser de al menos 600 x 315 píxeles, se recomiendan 1200 x 630 píxeles.
 
 ```html
 <meta property="og:type" content="website">
@@ -168,8 +171,8 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 <meta property="og:locale" content="en_US">
 ```
 
-> * 📖 [A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters/)
-> * 🛠 Test your page with the [Facebook OG testing](https://developers.facebook.com/tools/debug/)
+> * 📖 [Guia para compartir para Webmasters](https://developers.facebook.com/docs/sharing/webmasters/)
+> * 🛠 Prueba tu página con [Facebook OG testing](https://developers.facebook.com/tools/debug/)
  
 * [ ] **Twitter Card:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png)
 
@@ -183,23 +186,39 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 <meta name="twitter:image" content="https://example.com/image.jpg">
 ```
 
-> * 📖 [Getting started with cards — Twitter Developers](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started)
-> * 🛠 Test your page with the [Twitter card validator](https://cards-dev.twitter.com/validator) 
+> * 📖 [Empezando con Cards — Twitter Developers](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started)
+> * 🛠 Prueba tu página con [Twitter card validator](https://cards-dev.twitter.com/validator) 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
 ## HTML
 
-### Best practices
+### Las mejores prácticas
 
-* [ ] **HTML5 Semantic Elements:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) HTML5 Semantic Elements are used appropriately (header, section, footer, main...)
+* [ ] **Elementos semánticos HTML5:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Elementos semánticos HTML5 son usados apropiadamente y en orden (header, section, footer, main...)
 
-> 📖 [HTML Reference](http://htmlreference.io/)
+> 📖 [Referencia HTML](http://htmlreference.io/)
 
-* [ ] **Structured Data:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Pages using structured data are tested and are without errors.
+* [ ] **Datos estructurados:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Las páginas que utilizan datos estructurados se prueban y no tienen errores.
 
-> 📖 [Introduction to Structured Data | Search | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
+```application/ld+json
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "http://www.example.com",
+  "name": "Unlimited Ball Bearings Corp.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-401-555-1212",
+    "contactType": "Customer service"
+  }
+}
+</script>
+```
+
+> 📖 [Introducción a Datos Estructurados | Search | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > 🛠 Test your page with the [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
 
 * [ ] **Error pages:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Error 404 page and 5xx exist. Remember that the 5xx error page needs to have his CSS integrated (no external call on the current server).
