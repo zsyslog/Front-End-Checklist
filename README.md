@@ -221,65 +221,67 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 > 📖 [Introducción a Datos Estructurados | Search | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > 🛠 Test your page with the [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
 
-* [ ] **Error pages:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Error 404 page and 5xx exist. Remember that the 5xx error page needs to have his CSS integrated (no external call on the current server).
-* [ ] **Noopener:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) In case you are using ``target="_blank"`` on your links, ``rel="noreferrer noopener"`` is present on the ``<img>``.
-* [ ] **Clean up comments:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Unnecessary code needs to be removed before sending the page to production.
+* [ ] **Páginas de Error:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Páginas de Error 404 y 5xx existen. Recuerde que cualquier página de error 5xx necesita tener su CSS integrado (inline). No hacer una llamada externa en el servidor actual.
+* [ ] **Noopener:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) En caso de que se esté utilizando ``target = "_ blank"`` en los enlaces, ``rel = "noreferrer noopener"`` está presente en ``<img>``.
+* [ ] **Clean up comments:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Se debe eliminar el código innecesario antes de poner la página en producción.
   
-### HTML testing
+### Pruebas HTML
 
-* [ ] **W3C compliant:**: ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All pages need to be tested with the W3C validator to identify possible issues in the HTML code.
+* [ ] **Cumple con W3C:**: ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas las páginas deben probarse con el validador W3C para identificar posibles problemas en el código HTML.
  
-> 🛠 [W3C validator](https://validator.w3.org/)
+> 🛠 [Validador W3C](https://validator.w3.org/)
 
-* [ ] **HTML Lint:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) I use tools to help me analyze any issues I could have on my HTML code.
+* [ ] **Limpieza HTML:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Uso de herramientas para analizar cualquier problema que pueda tener el código HTML.
 
 > 🛠 [Dirty markup](https://dirtymarkup.com/)
 
-* [ ] **Desktop Browsers:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All pages were tested on all current desktop browsers (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
-* [ ] **Mobile Browsers:**  ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All pages were tested on all current mobile browsers (Native browser, Chrome, Safari...).
+* [ ] **Browsers de escritorio:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas las páginas se probaron en todos los navegadores de escritorio modernos. (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
+* [ ] **Browsers móviles:**  ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas las páginas se probaron en todos los navegadores móviles. (Browser nativo, Chrome, Safari...).
 
-* [ ] **Link checker:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) There are no broken links in my page, verify that you don't have any 404 error.
+* [ ] **Comprobación de Links:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) No existen enlaces rotos en la página, verifique que no tiene ningún error 404.
  
 > * 🛠 [W3C Link Checker](http://validator.w3.org/checklink)
 
-* [ ] **Adblockers test:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Your website shows your content correctly with adblockers enabled (You can provide a message encouraging people to disable their adblocker)
+* [ ] **Pruebas con Adblockers:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Su sitio web muestra contenido correctamente aunqu se encuentre con adblockers habilitados (Puede mostrar un mensaje para animar a las personas a deshabilitar su adblocker)
 
-- [ ] **Pixel perfect:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Pages are close to pixel perfect. Depending on the quality of the creatives, you may not be 100% accurate, but your page needs to be close to your template.
+- [ ] **Diseño Pixel Perfect:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Las páginas están cercanas a píxeles perfectos. Según la calidad del equipo creativo, puede que no sea 100% preciso, pero su página debe reflejar lo creado en su plantilla.
 
 >  [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
 ## Webfonts
 
-* [ ] **Webfont format:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) WOFF, WOFF2 and TTF are supported by all modern browsers.
+* [ ] **Formatos Webfont:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) WOFF, WOFF2 y TTF son compatibles con todos los navegadores modernos.
   
 > * 📖 [WOFF - Web Open Font Format - Caniuse](http://caniuse.com/#feat=woff). 
 > * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](http://caniuse.com/#feat=woff2).
 > * 📖 [TTF/OTF - TrueType and OpenType font support](http://caniuse.com/#feat=ttf)
 > * 📖 [Using @font-face - CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/)
 
-* [ ] **Webfont size:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Webfont sizes don't exceed 2 MB (all variants included)
+* [ ] **Webfont size:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Los Webfont no pesan mas de 2 MB (todas las variantes incluidas)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
 ## CSS
 
-> **Notes:** Take a look on [CSS guidelines](https://cssguidelin.es/) and [Sass Guidelines](https://sass-guidelin.es/) followed by most  Front-End developers. If you have a doubt on CSS properties, you can visit [CSS Reference](http://cssreference.io/).
+> **Notas:** Darle una mirada a [CSS guidelines](https://cssguidelin.es/) y a [Sass Guidelines](https://sass-guidelin.es/) usado por la mayoria de los desarrolladores Front-End. Si hay dudas acerca de propiedades CSS, puede revisar [CSS Reference](http://cssreference.io/).
 
-* [ ] **Responsive Web Design:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) The website is using responsive web design.
-* [ ] **CSS Print:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) A print stylesheet is provided and is correct on each page.
-* [ ] **Preprocessors:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Your page is using a CSS preprocessor ([Sass](http://sass-lang.com/) is preferred).
-* [ ] **Unique ID:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) If IDs are used, they are unique to a page
-* [ ] **Reset CSS:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) A CSS reset (reset, normalize or reboot) is used and up to date. *(If you are using a CSS Framework like Twitter Bootstrap or Foundation, a Normalize is already included into it.)*
+* [ ] **Diseño Web Responsive:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) El sitio usa diseño responsive.
+* [ ] **CSS Print:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Se proporciona una hoja de estilo especial para imprmir y su visualización es correcta en cada página.
+* [ ] **Preprocesadores:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) La página usa un preprocesados CSS 
+> * 📖 [Sass](http://sass-lang.com/).
+> * 📖 [Less](http://lesscss.org/).
+* [ ] **Unique ID:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Si se usan identificadores, son exclusivos de cada página del sitio.
+* [ ] **Reset CSS:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Se utiliza un reset de CSS. *(Si utiliza un Framework CSS como Twitter Bootstrap o Foundation, ya está incluido un Normalize)*.
 
 > * 📖 [Reset.css](https://meyerweb.com/eric/tools/css/reset/)
 > * 📖 [Normalize.css](https://necolas.github.io/normalize.css/)
 > * 📖 [Reboot](https://v4-alpha.getbootstrap.com/content/reboot/)
 
-* [ ] **JS prefix:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) All classes (or id- used in JavaScript files) begin with **js-** and are not styled into the CSS files.
+* [ ] **Prefijo JS:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Todas las clases e identificadores usados por rutinas javascript tienen el prefijo **js-** y no se aplica diseño a través de CSS.
 
 ```html
 <div id="js-slider" class="my-slider">
@@ -287,7 +289,7 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 <div id="id-used-by-cms" class="js-slider my-slider">
 ```
 
-* [ ] **CSS embed or line:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Avoid at all cost the use of CSS embed or inline: only used for valid reasons (ex: background-image for slider, CSS critical).
+* [ ] **CSS incrustado:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Evitar a toda costa el uso de CSS incrustado o inline: solo se utiliza por razones muy específicas (por ejemplo, background-image para slider, CSS critico).
 * [ ] **Vendor prefixes:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
 
 > 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
