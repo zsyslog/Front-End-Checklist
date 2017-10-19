@@ -2,94 +2,94 @@
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Contributors](https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg)](https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors)
 
-The **Front-End Checklist** is an exhaustive list of all elements you need to have / to test before launching your site / page HTML to production.
+El **Checklist Front-End** es una lista exhaustiva de todos los elementos que debe considerar / probar antes de lanzar un sitio / página HTML a producción.
 
-It is based on Front-End developers' years of experience, with the addition from some other open-source checklists.
+Se basa en los años de experiencia de los desarrolladores de Front-End, y añade algunas otras cosas de checklists de código abierto.
 
-## Table of Contents
-1. **[How to use](#how-to-use)**
-2. **[Head](#head)**
+## Contenido
+1. **[Como usar](#how-to-use)**
+2. **[Cabecera (Head)](#head)**
 3. **[HTML](#html)**
 4. **[Webfonts](#webfonts)**
 5. **[CSS](#css)**
-6. **[Images](#images)**
+6. **[Imagenes](#images)**
 7. **[JavaScript](#javascript)**
-8. **[Performance](#performance)**
-9. **[Accessibility](#accessibility)**
+8. **[Rendimiento](#performance)**
+9. **[Accesibilidad](#accessibility)**
 10. **[SEO](#seo)**
 
-## How to use?
+## ¿Como usar?
 
-All items in the **Front-End Checklist** are required for the majority of the projects, but some elements can be omitted or not essential (in case of an administration web app, you may not need RSS feed for example). We choose to use 3 levels of flexibility:
+Todos los elementos de la **Checklist Front-End** son necesarios para la mayoría de los proyectos, pero algunos elementos pueden omitirse o no ser esenciales (en el caso de una aplicación web de administración, es posible que no necesite un feed RSS, por ejemplo). Elegimos utilizar 3 niveles de flexibilidad:
 
-* ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) means that the item is **recommended** but can be omitted in some particular situations.
-* ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) means that the item is **highly recommended** and can eventually be omitted in some really particular cases. Some elements, if omitted, can have bad repercussions in terms of performance or SEO.
-* ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) means that the item **can't be omitted** by any reason. You may cause a dysfunction in your page or have accessibility or SEO issues. The testing priority needs to be on these elements first.
+* ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) quiere decir que es **recomendado** pero puede ser emitido en caso particulares.
+* ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) quiere decir que es **altamente recomendado** y puede ser omitido en casos muy particulares. Algunos elementos, si son omitidos por algún motivo, pueden tener repercusiones negativas en el rendimiento o en el SEO.
+* ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) quiere decir que **no puede ser omitido** por ningún motivo. Podría causar un mal funcionamiento de la página o tener problemas de rendimiento o SEO. Las prioridades de pruebas deben ponerse acá.
 
-Some resources possess an emoticon to help you understand which type of content / help you may find on the checklist:
+Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenido / ayuda puede encontrar en la lista de verificación
 
-* 📖: documentation or article
-* 🛠: online tool / testing tool
-* 📹: media or video content
+* 📖: documentación o artículo
+* 🛠: herramienta de pruebas
+* 📹: contenido de audio o video
 
 ---
-## Head
+## Cabecera (Head)
 
-> **Notes:** You can find [a list of everything](https://github.com/joshbuchea/HEAD) that could be found in the `<head>` of an HTML document.
+> **Notas:** Puede revisar una [completa lista](https://github.com/joshbuchea/HEAD) de lo que podemos encontrar en el `<head>` de un documento HTML.
 
 ### Meta tag
 
-* [ ] **Doctype:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) The Doctype is HTML5 and is in the top of all your HTML pages.
+* [ ] **Doctype:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) El Doctype es HTML5 y está arriba en todos los documentos HTML.
  
 ```html
 <!-- Doctype HTML5 -->
 <!DOCTYPE html>
 ```
 
-> 📖 [Determining the character encoding - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
+> 📖 [Determinación de la codificación de caracteres - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
-*The next 3 meta tags (Charset, X-UA Compatible and Viewport) need to come first in the head.*
+*los siguientes 3 meta tags (Charset, X-UA Compatible and Viewport) necesitan ir primero en la lista de cabeceras.*
 
-* [ ] **Charset:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) The charset declared (UTF-8) is declared correctly.
+* [ ] **Charset:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) El juego de caracteres declarado (UTF-8) se declara correctamente.
 
 ```html
 <!-- Set character encoding for the document -->
 <meta charset="utf-8">
 ```
 
-* [ ] **X-UA-Compatible:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) The X-UA-Compatible meta tag is present.
+* [ ] **X-UA-Compatible:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El X-UA-Compatible meta tag está presente.
  
 ```html
 <!-- Instruct Internet Explorer to use its latest rendering engine -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 ```
 
-> 📖 [Specifying legacy document modes (Internet Explorer)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
+> 📖 [Especificar modos legacy (Internet Explorer)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
-* [ ] **Viewport:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) The viewport is declared correctly
+* [ ] **Viewport:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) El viewport se declara correctamente.
 
 ```html
 <!-- Viewport for responsive web design -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-* [ ] **Title:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) A title is used on all pages (SEO: No more than 65 characters, website title included)
+* [ ] **Title:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Un título es usado para todas las páginas (SEO: No más de 65 caracteres, incluyendo el nombre del sitio)
 
 ```html
 <!-- Document Title -->
-<title>Page Title less than 65 characters</title>
+<title>Titulo de menos de 64 caracteres</title>
 ```
 
-> 📖 [Title - HTML | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
+> 📖 [Título - HTML | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
 
-* [ ] **Description:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) A meta description is provided, it is unique and doesn't possess more than 150 characters.
+* [ ] **Descripción:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Se proporciona una meta descripción, única y con 150 caracteres como máximo.
 
 ```html
 <!-- Meta Description -->
-<meta name="description" content="Description of the page less than 150 characters">
+<meta name="description" content="Descripción de menos de 150 caracteres">
 ```
 
-* [ ] **Favicons:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Each favicon has been created and displays correctly. If you have only a ``favicon.ico``, put it at the root of your site. Normally you won't need to use any markup. However, it's still good practice to link to it using the example below. Today, **PNG format is recommended** over ``.ico`` format (dimensions: 32x32px)
+* [ ] **Favicons:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Cada favicon se ha creado y se muestra correctamente. Si solo existe un ``favicon.ico``, colóquelo en la raíz del sitio. Normalmente no se necesita ningún marcado. Sin embargo, es buena práctica vincularlo usando el siguiente ejemplo. Actualmente **el formato PNG es el recomendado** sobre el formato ``.ico`` (dimensiones: 32x32px)
  
 ```html
 <!-- Standard favicon -->
@@ -98,21 +98,21 @@ Some resources possess an emoticon to help you understand which type of content 
 <link rel="icon" type="image/png" href="https://example.com/favicon.png" />
 ``` 
 
-> * 🛠 [Favicon Generator](https://www.favicon-generator.org/)
+> * 🛠 [Generador Favicon](https://www.favicon-generator.org/)
 > * 🛠 [RealFaviconGenerator](https://realfavicongenerator.net/)
 > * 📖 [Favicon Cheat Sheet](https://github.com/audreyr/favicon-cheat-sheet)
 > * 📖 [Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS Tricks](https://css-tricks.com/favicon-quiz/)
-> * 📖 [PNG favicons - caniuse](http://caniuse.com/#feat=link-icon-png)
+> * 📖 [Favicons PNG - caniuse](http://caniuse.com/#feat=link-icon-png)
 
-* [ ] **Apple Touch Icon:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Apple touch favicon apple-mobile-web-app-capable are present. *(Create your Apple Icon file with at least 200x200px dimension to support all dimensions that you may need)*
+* [ ] **Icono Apple Touch:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) El favicon Apple touch apple-mobile-web-app-capable está presente. *(Cree su archivo ícono Apple con dimensiones de al menos 200x200 pixeles para admitir todas las dimensiones que pueda necesitar)*
 
 ```html
 <!-- Apple Touch Icon -->
 <link rel="apple-touch-icon" href="/custom-icon.png">
 ```
-> * 📖 [Configuring Web Applications](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+> * 📖 [Configurando Aplicaciones Web](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
-* [ ] **Canonical:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Use ``rel="canonical"`` to avoid duplicate content.
+* [ ] **Canonical:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Use ``rel="canonical"`` para evitar contenido duplicado.
 
 ```html
 <!-- Helps prevent duplicate content issues -->
