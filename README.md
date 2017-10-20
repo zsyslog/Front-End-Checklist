@@ -194,7 +194,7 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 ---
 ## HTML
 
-### Las mejores prácticas
+### Buenas prácticas
 
 * [ ] **Elementos semánticos HTML5:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Elementos semánticos HTML5 son usados apropiadamente y en orden (header, section, footer, main...)
 
