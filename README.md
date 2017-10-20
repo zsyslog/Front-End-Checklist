@@ -487,14 +487,14 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 ---
 ## SEO
 
-* [ ] **Google Analytics:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Google Analytics is installed and correctly configured.
-* [ ] **Headings logic:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Heading text helps to understand the content in the current page.
-* [ ] **sitemap.xml:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) A sitemap.xml exists and was submit in Google Search Console (ex:Google Webmaster Tools)
-* [ ] **robots.txt:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) The robots.txt is not blocking webpages
-Link your website to the Google webmaster tools
-* [ ] **Sitemap HTML:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) An HTML sitemap is provided and is accessible via a link in the footer of your website.
+* [ ] **Google Analytics:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Google Analytics está instalado y configurado correctamente.
+* [ ] **Lógica de los Encabezados:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El texto puesto en los encabezados ayuda a comprender el contenido de la página actual.
+* [ ] **sitemap.xml:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Existe un sitemap.xml que se envió en Google Search Console (por ejemplo: Google Webmaster Tools)
+* [ ] **robots.txt:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) El archivo robots.txt no está bloqueando páginas web
+Enlace el sitio a Google webmaster tools
+* [ ] **Sitemap HTML:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Se proporciona un mapa del sitio en formato HTML y éste se puede acceder a través de un enlace puesto en el footer de su sitio web.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
 ## Contributing
