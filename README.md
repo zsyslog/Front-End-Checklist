@@ -57,7 +57,7 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 <meta charset="utf-8">
 ```
 
-* [ ] **X-UA-Compatible:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El X-UA-Compatible meta tag está presente.
+* [ ] **X-UA-Compatible:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El meta tag X-UA-Compatible está presente.
  
 ```html
 <!-- Instruct Internet Explorer to use its latest rendering engine -->
@@ -120,7 +120,7 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 ```
 
 ### HTML tags
-* [ ] **Language tag:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) La etiqueta de idioma de su sitio web se especifica y está relacionada con el idioma de la página actual.
+* [ ] **Idioma:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) La etiqueta de idioma de su sitio web se especifica y está relacionada con el idioma de la página actual.
 
 ```html
 <html lang="en">
@@ -149,7 +149,7 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 
 * [ ] **Feed RSS:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Si el proyecto es un blog o tiene artículos, se proporcionó un enlace RSS.
 
-* [ ] **CSS Critical:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El CSS crítico ("above the fold") recoge todos los CSS utilizados para representar la capa visible de la página. Está incrustado antes de su llamada CSS principal y entre etiqueta ``<style></style>``, en una sola línea y minificada.
+* [ ] **CSS Critical:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El CSS crítico ("above the fold") recoge todos los CSS fundamentales utilizados para representar la capa visible de la página. Está incrustado antes de su llamada CSS principal, entre etiqueta ``<style></style>``, en una sola línea y minificada.
 
 > 🛠 [Critical por Addy Osmany on Github](https://github.com/addyosmani/critical)
 
@@ -290,170 +290,199 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 ```
 
 * [ ] **CSS incrustado:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Evitar a toda costa el uso de CSS incrustado o inline: solo se utiliza por razones muy específicas (por ejemplo, background-image para slider, CSS critico).
-* [ ] **Vendor prefixes:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
+* [ ] **Prefijos específicos de proveedores:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Los prefijos CSS de proveedores se usan y se generan de acuerdo con la compatibilidad de compatibilidad de su navegador.
+
+```
+.example {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s; /* vendor prefix for webkit */
+    -o-transition: all .5s; /* vendor prefix for opera */
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none; /* vendor prefix for mozilla */
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
+```
 
 > 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
 
-### Performance
+### Rendimiento
 
-- [ ] **Concatenation:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) CSS files are concatenated in a single file *(Not for HTTP/2)*
-- [ ] **Minification:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All CSS files are minified.
-- [ ] **Non-blocking:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) CSS files need to be non-blocking to prevent the DOM from taking time to load.
+- [ ] **Concatenación:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Los archivos CSS se concatenan en un único archivo *(No para HTTP/2)*
+- [ ] **Minificación:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todos los archivos CSS están minificados.
+- [ ] **CSS no bloqueante:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Los archivos CSS deben ser no bloqueantes para evitar que el DOM tome tiempo en cargar.
 
 > * 📖 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
 
-- [ ] **Unused CSS:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Remove unused CSS
+- [ ] **CSS en desuso:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Se ha quitado CSS que no se usa.
 
 > * 🛠 [UnCSS Online](https://uncss-online.com/) 🛠
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
 
 
-### CSS testing
+### Pruebas CSS
 
-* [ ] **Stylelint:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All CSS or SCSS files are without any errors. 
+* [ ] **Stylelint:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todos los archivos con código CSS o SCSS no contienen errores. 
 
 > * 🛠 [stylelint, a CSS linter](https://stylelint.io/)
 > * 📖 [Sass guidelines](https://sass-guidelin.es/)
 
-* [ ] **Responsive web design:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All pages were tested at the following breakpoints: 320px, 768px, 1024px (can be more / different according to your analytics).
+* [ ] **Diseño web Responsive:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png)todas las páginas sin testeadas exitosamente en las siguientes dimensiones de quiebre: 320px, 768px, 1024px (lista que se puede ajustar a las necesidades del proyecto).
 
-* [ ] **CSS Validator:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) The CSS was tested and pertinent errors were corrected.
+* [ ] **Validador CSS:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El CSS fue probado y se corrigieron todos los errores del caso.
 
-> 🛠 [CSS Validator](http://jigsaw.w3.org/css-validator/)
+> 🛠 [Validador CSS](http://jigsaw.w3.org/css-validator/)
 
-* [ ] **Debug CSS:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Pages were tested with DebugCSS
+* [ ] **Depuración CSS:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) paginas fueron probadas con DebugCSS
 
-> 🛠 [Debug CSS](http://yahoo.github.io/debugCSS) (you can use the bookmarklet)
+> 🛠 [Debug CSS](http://yahoo.github.io/debugCSS)
 
-* [ ] **Reading direction:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All pages need to be tested for LTR and RTL languages if they need to be supported.
+* [ ] **Dirección de lectura:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) En caso de ser requerido, todas las paginas deben ser probadas con lenguajes RTL o LTR.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
-## Images
+## Imágenes
 
-> **Notes:** For a complete understanding of image optimization, check the free ebook **[Essential Image Optimization](https://images.guide/)** from Addy Osmani.
+> **Notas:** Puede consulta el ebook gratuito de Addy Osmani para una mejor compresión de esta sección **[Essential Image Optimization](https://images.guide/)** 
 
-### Best practices
-* [ ] **Optimization:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
+### Buenas prácticas
+* [ ] **Optimización:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas las imágenes están optimizadas para ser renderizadas en navegadores. El formato WebP se puede usar para páginas críticas (como Homepage).
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
-> * 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
+> * 🛠 Usar [ImageOptim](https://imageoptim.com/) para optimizar imágenes de forma gratuita.
 
-* [ ] **Retina:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) You provide layout images x2 or 3x, support retina display.
-* [ ] **Sprite:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Small images are in a sprite file (in case of icons, they can be in an SVG sprite image).
-* [ ] **Width and Height:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All ``<img>`` have height and width set (Don't specify px or %).
+* [ ] **Retina:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Se proporcionan imágenes de diseño x2 y se admite pantalla retina.
 
-> ***Note:*** Lots of developers assume that width and height are not compatible with responsive web design. It's absolutely not the case.
+* [ ] **Sprite:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Las imágenes pequeñas están en un archivo de sprite (en el caso de los iconos, pueden estar en una imagen sprite en formato SVG).
 
-* [ ] **Alternative text:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All ``<img>`` have an alternative text which describe the image visually.
-* [ ] **Lazy loading:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Images are lazyloaded (A noscript fallback is always provided).
+* [ ] **Alto y Ancho:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todos ``<img>`` tienen alto y ancho establecidos (No especifica píxeles o porcentaje).
 
-**[⬆ back to top](#table-of-contents)**
+> ***Nota:*** Muchos desarrolladores suponen que el ancho y la altura no son compatibles con el diseño web responsive. No es el caso en lo absoluto.
+
+* [ ] **Texto Alternativo:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas las etiquetas ``<img>`` tienen definido el texto alternativo que describe la imagen visualmente. 
+
+```img
+<img src="image.png" alt="Descripción del contenido de la imágen">
+```
+
+* [ ] **Carga Lazy:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Las imágenes se cargan en demanda (lazyloaded) a medida que van apareciendo en pantalla y no antes (Siempre se proporciona una alternativa para el caso noscript).
+
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
 ## JavaScript
 
-### Best practices
+### Buenas prácticas
 
-* [ ] **JavaScript Inline:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) You don't have any JavaScript code inline (mixed with your HTML code).
-* [ ] **Concatenation:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) JavaScript files are concatenated.
-* [ ] **Minification:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) JavaScript files are minified (you can add the ``.min`` suffix).
+* [ ] **JavaScript Inline:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) No tiene ningún código JavaScript inline (mezclado entre el código HTML).
+* [ ] **Concatenación:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Los archivos JavaScript están concatenados.
+* [ ] **Minificación:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Los archivos JavaScript están minificados (es valioso agregar el sufijo ``.min.js``).
 
 > [Minify Resources (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
 
-* [ ] **Non-blocking:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) JavaScript files are loaded asynchronously using ``async`` or deferred using ``defer`` attribute.
+* [ ] **Javascript no bloqueante:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Los archivos JavaScript se cargan de forma asincrónica con ``async`` o se difieren su carga mediante el atributo ``defer``.
 
-> 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
+> 📖 [Quitar el JavaScript que bloquea el render](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-* [ ] **Modernizr:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) If you need to target some specific features you can use a custom Modernizr to add classes in your ``<html>`` tag.
+* [ ] **Modernizr:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Si necesita usar algunas características específicas del navegador, puede usar un Modernizr.
 
-> 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
+> 🛠 [Personalizar Modernizr](https://modernizr.com/download?setclasses)
 
-### JavaScript testing
+### Pruebas JavaScript
 
-* [ ] **ESLint:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) No errors are flagged by ESLint (based on your configuration or standards rules)
+* [ ] **ESLint:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ESLint no marca ningún error (según las reglas de configuración o estándares)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
-## Performance
+## Rendimiento
 
-### Best practices
+### Buenas prácticas
 
-- [ ] **Weight page:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) The weight of each page is between 0kb and 500kb
+- [ ] **Tamaño de la página (peso):** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) El peso de cada página está entre 0kb y 500kb.
 
 > * 🛠 [Website Page Analysis](https://tools.pingdom.com)
 > * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
-- [ ] **Minified:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Your HTML is minified
-> 🛠 [W3C Validator](http://validator.w3.org/)
+- [ ] **Minified:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El HTML está miníficado
+> 🛠 [Validador W3C](http://validator.w3.org/)
  
-* [ ] **Lazy loading:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Images, scripts and CSS need to be lazy loaded to improve the response time of the current page (See details in their respective sections).
+* [ ] **Carga Lazy:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Las imágenes, scripts y CSS deben cargarse de forma diferida para mejorar el tiempo de respuesta de la página actual (revise los detalles en las respectivas secciones anteriores).
 
-### Performance testing
+### Pruebas de rendimiento
 
-* [ ] **Google PageSpeed:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All your pages were tested (not only the homepage) and have min 90/100.
+* [ ] **Google PageSpeed:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas sus páginas fueron evaluadas (y no solo la página de inicio) y tienen puntuación entre 90 y 100.
 
 > * 🛠 [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 > * 🛠 [Test your mobile speed with Google](https://testmysite.withgoogle.com)
 > * 🛠 [WebPagetest - Website Performance and Optimization Test](https://www.webpagetest.org/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
-## Accessibility
+## Accesibilidad
 
-> **Notes:** You can watch the playlist [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
+> **Notas:** Revise la video playlist [A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
 
-### Best practices
+### Buenas prácticas
 
-- [ ] **Progressive enhancement:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Major functionality like main navigation and search should work without JavaScript enabled.
+- [ ] **Mejora Progresiva:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Las funcionalidades principales, como la navegación principal y la búsqueda, funciona sin JavaScript habilitado.
 
 > 📖 [Enable / Disable JavaScript in Chrome Developer Tools](https://www.youtube.com/watch?v=kBmvq2cE0D8)
 
-- [ ] **Color contrast:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Color contrast should at least pass WCAG AA (AAA for mobile)
+- [ ] **Contrastes de Color:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) El contraste de color debería pasar al menos WCAG AA (debe pasar AAA para dispositivos móviles)
 
 > 🛠 [Contrast ratio](http://leaverou.github.io/contrast-ratio/)
 
-#### Headings
+#### Encabezados
 
-* [ ] **H1:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) All pages have an H1 which is not the title of the website.
-* [ ] **Headings:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Headings should be used properly in the right order (H1 to H6)
+* [ ] **H1:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas las páginas tienen un H1 que no es el título del sitio web.
+* [ ] **Headings:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Los títulos deben usarse correctamente en el orden correcto (H1 a H6)
 
-> 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+> 📹 [Por qué los encabezados y los puntos de referencia son tan importantes -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
 #### Landmarks
 
-- [ ] **Role banner:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<header>`` has ``role="banner"``
-- [ ] **Role navigation:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<nav>`` has ``role="navigation"``
-- [ ] **Role main:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<main>`` has ``role="main"``
+- [ ] **Role banner:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<header>`` contiene ``role="banner"``
+- [ ] **Role navigation:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<nav>`` contiene ``role="navigation"``
+- [ ] **Role main:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) ``<main>`` contiene ``role="main"``
 
 > 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
 
-### Semantics
+### Semántica
 
-- [ ] **Specific HTML5 input types are used:** This is especially important for mobile devices that show customized keypads and widgets for different types.
+- [ ] **Se usan mecanismos de entrada propios de HTML5:** Esto es importante en dispositivos móviles que muestran teclados y widgets personalizados para los diferentes tipos.
 
-> 📖 [Mobile Input Types](http://mobileinputtypes.com/)
+> 📖 [tipos de entrada en Moviles](http://mobileinputtypes.com/)
 
-### Form
-* [ ] **Label:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) A label is associated with each input form element. In case, a label can't be display, use ``aria-label`` instead.
+### Formulario
+* [ ] **Label:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Una etiqueta está asociada con un elemento de formulario de entrada. En caso de que una etiqueta no pueda mostrarse, use ``aria-label`` en su lugar.
 
 > 📖 [Using the aria-label attribute - MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
 
-### Accessibility testing
-* [ ] **Accessibility standards testing:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Use the WAVE tool to test if your page respects the accessibility standards.
+### Pruebas de Accesibilidad
+* [ ] **Pruebas Estándares de Accesibilidad:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Use la herramienta WAVE para comprobar si su página respeta los estándares de accesibilidad.
 
-> 🛠 [Wave testing](http://wave.webaim.org/)
 
-* [ ] **Keyboard navigation:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Test your website using only your keyboard in a previsible order. All interactive elements are reachable and usable.
-* [ ] **Screen-reader:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) All pages were tested in a screen-reader (VoiceOver, ChromeVox, NVDA or Lynx).
-* [ ] **Focus style:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) If the focus is disabled, it is replaced by visible state in CSS.
+> 🛠 [Pruebas Wave](http://wave.webaim.org/)
+
+* [ ] **Navegación con teclado:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Pruebe su sitio web usando solo el teclado en un orden previsible. Todos los elementos interactivos son alcanzables y utilizables.
+
+* [ ] **Screen-reader:** ![Medium](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png) Todas las páginas se probaron exitosamente en un lector de pantalla (VoiceOver, ChromeVox, NVDA o Lynx).
+
+* [ ] **Focus style:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Si el foco está desactivado, se reemplaza por un estado visible en CSS.
 
 > 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#table-of-contents)**
 
 ---
 ## SEO
