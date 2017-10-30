@@ -157,7 +157,7 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 
 ### Social meta 
 
-***Open Graph de Facebook*** y ***Cards de Twitter *** son altamente recomendados para cualquier sitio. Otras etiquetas de redes sociales se pueden considerar si se orientan a una red en particular y se quiere garantizar su visualización.
+***Open Graph de Facebook*** y ***Cards de Twitter*** son altamente recomendados para cualquier sitio. Otras etiquetas de redes sociales se pueden considerar si se orientan a una red en particular y se quiere garantizar su visualización.
 
 * [ ] **Open Graph de Facebook:** ![Low](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png) Todos los tags Open Graph de Facebook (OG) se prueban y no falta ninguno o ninguno tiene información falsa. Las imágenes deben ser de al menos 600 x 315 píxeles, se recomiendan 1200 x 630 píxeles.
 
@@ -351,7 +351,7 @@ Algunos recursos poseen un ícono para ayudar a comprender qué tipo de contenid
 ---
 ## Imágenes
 
-> **Notas:** Puede consulta el ebook gratuito de Addy Osmani para una mejor compresión de esta sección **[Essential Image Optimization](https://images.guide/)** 
+> **Notas:** Puede consultar el ebook gratuito de Addy Osmani para comprender mejor esta sección **[Essential Image Optimization](https://images.guide/)** 
 
 ### Buenas prácticas
 * [ ] **Optimización:** ![High](http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png) Todas las imágenes están optimizadas para ser renderizadas en navegadores. El formato WebP se puede usar para páginas críticas (como Homepage).
